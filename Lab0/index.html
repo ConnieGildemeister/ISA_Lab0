@@ -1,18 +1,29 @@
+<!-- 
+    NOTE: ChatGPT was utilized to generate most of the code. 
+    some modifications were made by myself, it's been a long while
+    since I've used Javascript, html, and css so I'm a bit rusty, and used my own
+    comments to help me understand the code better.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for the page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab0</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header for the page -->
     <h2 id="labelMessage">How many buttons to create?</h2>
     <input type="number" id="numberInput" min="3" max="7" placeholder="Enter a number (3-7)">
     <button id="startButton">Go</button>
     
+    <!-- Container for the buttons -->
     <div id="buttonContainer"></div>
 
+    <!-- Container for the message -->
     <script src="lang/messages/en/user.js"></script>
     <script src="js/script.js"></script>
 </body>

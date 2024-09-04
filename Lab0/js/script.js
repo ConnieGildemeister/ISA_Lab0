@@ -1,9 +1,18 @@
+/* 
+    NOTE: ChatGPT was utilized to generate most of the code. 
+    some modifications were made by myself, it's been a long while
+    since I've used Javascript, html, and css so I'm a bit rusty, and used my own
+    comments to help me understand the code better.
+*/
+
 // Utility class for common helper functions
 class Utils {
     // Generates a random color in hex
     static getRandomColor() {
+        // Hex color code
         const letters = '0123456789ABCDEF';
         let color = '#';
+        // Loop to generate a random color
         for (let i = 0; i < 6; i++) {
             color += letters[Math.floor(Math.random() * 16)];
         }
@@ -12,6 +21,7 @@ class Utils {
 
     // Validates input to ensure the number is between 3 and 7
     static validateInput(input) {
+        // Check if the input is a number and within the range
         const n = parseInt(input);
         if (isNaN(n) || n < 3 || n > 7) {
             alert(messages.enterValidNumber);
@@ -30,11 +40,13 @@ class Utils {
 
 // Class to represent each button and its behavior
 class Button {
+    // The constructor for the button
     constructor(order, color, width = '10em', height = '5em') {
         this.order = order;
         this.element = document.createElement('button');
         this.element.style.width = width;
         this.element.style.height = height;
+        // Sets the buttons relative so no overlapping initially
         this.element.style.position = 'relative';
         this.element.style.backgroundColor = color;
         this.element.innerText = `${order}`;
@@ -42,7 +54,8 @@ class Button {
 
     // Set position of the button
     setPosition(top, left) {
-        this.element.style.position = 'absolute'; // Change to absolute for scrambling
+        // Uses absolute positioning to move the button so it doesn't affect other buttons
+        this.element.style.position = 'absolute';
         this.element.style.top = top;
         this.element.style.left = left;
     }
