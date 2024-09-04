@@ -1,0 +1,30 @@
+/* Styles for the button container */
+#buttonContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if the screen is too narrow */
+    justify-content: flex-start; /* Align buttons to the left initially */
+    gap: 10px; /* Space between buttons */
+    position: relative; /* Ensures the container is positioned for the absolute buttons after scrambling */
+    min-height: 100px;
+}
+
+/* Styles for the buttons */
+button {
+    height: 5em;
+    width: 10em;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Optional: Style for buttons after scrambling */
+button.hidden-number {
+    font-size: 0; /* Hide text */
+}
+
+button.hidden-number::after {
+    content: "?"; /* Show a question mark after scrambling */
+    font-size: 1.2em;
+    color: white;
+}
